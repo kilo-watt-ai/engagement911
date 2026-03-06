@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engagement 911 | Employee Engagement Consulting for Organizational Excellence</title>
+    <meta name="description" content="Engagement 911 helps companies transform workplace culture, boost employee engagement, and drive measurable organizational performance. Because Engagement Can't Wait.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Engagement 911">
+    <link rel="canonical" href="https://engagement911.com/">
+    <meta property="og:title" content="Engagement 911 | Because Engagement Can't Wait">
+    <meta property="og:description" content="Transform your workplace culture and drive organizational performance with expert employee engagement consulting.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://engagement911.com/">
+    <meta property="og:site_name" content="Engagement 911">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Engagement 911 | Employee Engagement Consulting">
+    <meta name="twitter:description" content="Strategic employee engagement consulting that drives measurable organizational performance. Because Engagement Can't Wait.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Crimson+Pro:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6B7FD7;
+            --primary-dark: #4A5BAA;
+            --primary-light: #8B9FE7;
+            --accent: #E8593A;
+            --accent-hover: #D04828;
+            --text-dark: #2D3748;
+            --text-body: #4a5568;
+            --text-light: #5A6B7F;
+            --bg-light: #F0F4FB;
+            --bg-warm: #F0F4FB;
+            --white: #ffffff;
+            --border: #D8DFF2;
+            --shadow: rgba(107, 127, 215, 0.1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-body);
+            background: var(--white);
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; }
+        h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 1rem; }
+        h3 { font-size: 1.35rem; margin-bottom: 0.75rem; }
+        p { margin-bottom: 1.25rem; }
+        a { color: var(--primary); text-decoration: none; transition: color 0.2s ease; }
+        a:hover { color: var(--accent); }
+        header {
+            position: sticky;
+            top: 0;
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        nav ul { display: flex; list-style: none; gap: 2.5rem; }
+        nav a { font-weight: 500; color: var(--text-dark); font-size: 0.95rem; }
+        nav a:hover { color: var(--accent); }
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+        }
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(232, 89, 58, 0.3);
+        }
+        .btn-secondary {
+            background: var(--primary);
+            color: var(--white);
+        }
+        .btn-secondary:hover { background: var(--primary-dark); color: var(--white); }
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-outline:hover { background: var(--primary); color: var(--white); }
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(107, 127, 215, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-container { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+        .hero-content { max-width: 650px; }
+        .hero-tagline { font-family: 'Caveat', cursive; font-size: 1.5rem; color: rgba(255, 255, 255, 0.85); margin-bottom: 1rem; letter-spacing: 0.5px; }
+        .hero h1 { color: var(--white); margin-bottom: 1.5rem; font-size: clamp(2.75rem, 5vw, 4.25rem); }
+        .hero-subtitle { font-size: 1.35rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 2.5rem; line-height: 1.6; }
+        .logo-text { font-family: 'Crimson Pro', serif; }
+        .logo-text strong { color: var(--accent); }
+        .skip-link { position: absolute; top: -100%; left: 1rem; background: var(--primary); color: white; padding: 0.75rem 1.5rem; border-radius: 0 0 8px 8px; z-index: 200; font-weight: 600; }
+        .skip-link:focus { top: 0; color: white; }
+        .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .hero-stats { display: flex; gap: 3rem; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.15); }
+        .stat { text-align: center; }
+        .stat-number { font-family: 'Crimson Pro', serif; font-size: 2.5rem; font-weight: 700; color: var(--white); display: block; }
+        .stat-label { font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); text-transform: uppercase; letter-spacing: 0.5px; }
+        section { padding: 5rem 2rem; }
+        .section-container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 3rem; }
+        .section-header p { font-size: 1.15rem; color: var(--text-light); }
+        .services { background: var(--bg-light); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px var(--shadow); }
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+        .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .step { text-align: center; padding: 2rem; position: relative; }
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--bg-warm);
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0 auto 1.5rem;
+        }
+        .testimonials { background: var(--bg-warm); }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+        .testimonial-card { background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 2px 8px var(--shadow); }
+        .testimonial-quote { font-family: 'Crimson Pro', serif; font-size: 1.25rem; color: var(--text-dark); font-style: italic; margin-bottom: 1.5rem; line-height: 1.5; }
+        .testimonial-author { display: flex; align-items: center; gap: 1rem; }
+        .author-avatar { width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: 600; font-size: 1.1rem; }
+        .author-info h4 { font-family: 'Source Sans 3', sans-serif; font-size: 1rem; margin-bottom: 0.25rem; }
+        .author-info p { font-size: 0.9rem; color: var(--text-light); margin: 0; }
+        .cta-section { background: var(--primary); color: var(--white); text-align: center; padding: 5rem 2rem; }
+        .cta-section h2 { color: var(--white); margin-bottom: 1rem; }
+        .cta-section p { color: rgba(255, 255, 255, 0.85); font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem; }
+        .contact-section { background: var(--bg-light); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+        .contact-info h3 { margin-bottom: 1.5rem; }
+        .contact-methods { margin-top: 2rem; }
+        .contact-method { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; }
+        .contact-icon { width: 44px; height: 44px; background: var(--white); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.25rem; flex-shrink: 0; }
+        .contact-form { background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 2px 12px var(--shadow); }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-dark); font-size: 0.95rem; }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1rem;
+            color: var(--text-dark);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(107, 127, 215, 0.15); }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .newsletter-box { background: linear-gradient(135deg, var(--bg-warm) 0%, var(--white) 100%); padding: 2rem; border-radius: 12px; margin-top: 2rem; border: 1px solid var(--border); }
+        .newsletter-box h4 { margin-bottom: 0.5rem; }
+        .newsletter-form { display: flex; gap: 0.75rem; margin-top: 1rem; }
+        .newsletter-form input { flex: 1; padding: 0.875rem 1rem; border: 1px solid var(--border); border-radius: 6px; font-family: 'Source Sans 3', sans-serif; font-size: 1rem; }
+        .newsletter-form input:focus { outline: none; border-color: var(--accent); }
+        footer { background: var(--text-dark); color: var(--white); padding: 3rem 2rem 2rem; }
+        .footer-container { max-width: 1200px; margin: 0 auto; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand p { color: rgba(255, 255, 255, 0.7); margin-top: 1rem; }
+        .footer-links h4 { color: var(--white); font-family: 'Source Sans 3', sans-serif; font-size: 1rem; margin-bottom: 1rem; }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 0.75rem; }
+        .footer-links a { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; }
+        .footer-links a:hover { color: var(--white); }
+        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .footer-bottom p { color: rgba(255, 255, 255, 0.5); font-size: 0.9rem; margin: 0; }
+        .mobile-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+        @media (max-width: 900px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .hero-stats { gap: 2rem; }
+        }
+        @media (max-width: 768px) {
+            nav ul { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; padding: 1rem 2rem; border-bottom: 1px solid var(--border); gap: 1rem; }
+            nav ul.active { display: flex; }
+            .mobile-toggle { display: block; }
+            .hero-cta { flex-direction: column; }
+            .hero-stats { flex-direction: column; gap: 1.5rem; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .newsletter-form { flex-direction: column; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Engagement 911",
+        "description": "Strategic employee engagement consulting that drives measurable organizational performance.",
+        "url": "https://engagement911.com",
+        "slogan": "Because Engagement Can't Wait",
+        "serviceType": ["Employee Engagement Consulting", "Leadership Development", "Cultural Transformation", "Retention Strategy"],
+        "areaServed": "US",
+        "email": "hello@engagement911.com",
+        "knowsAbout": ["Employee Engagement", "Organizational Development", "Leadership Training", "Workforce Retention"]
+    }
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">🚑</div>
+                <span class="logo-text">Engagement <strong>911</strong></span>
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#process">Our Process</a></li>
+                    <li><a href="#testimonials">Success Stories</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <p class="hero-tagline">Because Engagement Can't Wait</p>
+                    <h1>Revitalize Your Workforce. Transform Your Results.</h1>
+                    <p class="hero-subtitle">Strategic employee engagement consulting that drives measurable organizational performance. We help leaders build cultures where people thrive and business outcomes soar.</p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">Schedule a Free Consultation</a>
+                        <a href="#services" class="btn btn-outline" style="color: white; border-color: rgba(255,255,255,0.5);">Explore Our Services</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat"><span class="stat-number">47%</span><span class="stat-label">Avg. Engagement Lift</span></div>
+                        <div class="stat"><span class="stat-number">200+</span><span class="stat-label">Organizations Served</span></div>
+                        <div class="stat"><span class="stat-number">92%</span><span class="stat-label">Client Retention</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Comprehensive Engagement Solutions</h2>
+                    <p>From diagnostic assessment to sustained cultural transformation, we provide end-to-end consulting services tailored to your organization's unique challenges and goals.</p>
+                </div>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon">📊</div>
+                        <h3>Engagement Diagnostics</h3>
+                        <p>Uncover the root causes of disengagement with our proprietary assessment methodology. We analyze survey data, conduct focus groups, and identify the specific drivers impacting your team's performance and retention.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">🎯</div>
+                        <h3>Leadership Development</h3>
+                        <p>Equip your managers with the skills to inspire and activate their teams. Our workshops and coaching programs focus on the behaviors that directly correlate with employee motivation and discretionary effort.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">🔄</div>
+                        <h3>Cultural Transformation</h3>
+                        <p>Build a sustainable high-performance culture through systematic change management. We partner with executive teams to align values, reshape norms, and embed engagement into every layer of your organization.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">📈</div>
+                        <h3>Retention Strategy</h3>
+                        <p>Reduce costly turnover by addressing the factors that drive employees to leave. Our retention frameworks help you identify flight risks early and implement targeted interventions that keep top talent engaged.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">🤝</div>
+                        <h3>Employee Experience Design</h3>
+                        <p>Map and optimize the entire employee journey—from onboarding to exit. We identify friction points and design experiences that reinforce commitment at every career milestone.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">💡</div>
+                        <h3>Continuous Listening Systems</h3>
+                        <p>Move beyond annual surveys with real-time feedback mechanisms. We implement pulse surveys, stay interviews, and feedback loops that keep your finger on the pulse of organizational health.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="process">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Our Proven Engagement Framework</h2>
+                    <p>A systematic approach that delivers sustainable results. We've refined this methodology across hundreds of client engagements to ensure consistent, measurable outcomes.</p>
+                </div>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Discover</h3>
+                        <p>Deep diagnostic assessment combining quantitative surveys with qualitative insights. We uncover the specific engagement drivers unique to your organization.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Design</h3>
+                        <p>Custom strategy development aligned with your business objectives. We prioritize initiatives with the highest impact on both engagement scores and operational outcomes.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Deploy</h3>
+                        <p>Phased implementation with change management support. We equip your leaders with the tools and training needed to drive adoption and sustain momentum.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Deliver</h3>
+                        <p>Continuous measurement and iterative refinement. We track leading indicators of engagement and adjust strategies to ensure lasting cultural transformation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Client Success Stories</h2>
+                    <p>Organizations across industries have transformed their workplace culture and business results with our engagement expertise.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <article class="testimonial-card">
+                        <p class="testimonial-quote">"Engagement 911 helped us reduce voluntary turnover by 34% in just eight months. Their diagnostic approach pinpointed issues we couldn't see internally, and their practical recommendations were immediately actionable."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MC</div>
+                            <div class="author-info"><h4>Marcus Chen</h4><p>Chief People Officer, Velocity Tech</p></div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <p class="testimonial-quote">"The leadership development program completely shifted how our managers approach team motivation. Our engagement scores jumped 28 points, but more importantly, our customer satisfaction followed right behind."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SR</div>
+                            <div class="author-info"><h4>Sarah Rodriguez</h4><p>VP of Human Resources, Meridian Healthcare</p></div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <p class="testimonial-quote">"After two failed engagement initiatives, we needed a partner who understood the complexity of cultural change. Engagement 911 delivered a sustainable transformation that's still gaining strength two years later."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">DK</div>
+                            <div class="author-info"><h4>David Kim</h4><p>CEO, Horizon Manufacturing</p></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="section-container">
+                <h2>Ready to Transform Your Organization?</h2>
+                <p>Every month of disengagement costs your company in lost productivity, increased turnover, and missed opportunities. Let's start building your high-performance culture today.</p>
+                <a href="#contact" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Request Your Free Consultation</a>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Let's Start a Conversation</h2>
+                        <p>Every organization's engagement challenges are unique. We'd love to learn about yours and explore how we can help you build a more motivated, productive, and committed workforce.</p>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">📧</div>
+                                <div><h4>Email Us</h4><p>hello@engagement911.com</p></div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="contact-icon">📞</div>
+                                <div><h4>Call Us</h4><p>Schedule a call through the form</p></div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="contact-icon">🕐</div>
+                                <div><h4>Response Time</h4><p>We respond to all inquiries within 24 hours</p></div>
+                            </div>
+                        </div>
+                        <div class="newsletter-box">
+                            <h4>Stay Informed on Engagement Trends</h4>
+                            <p style="margin-bottom: 0; color: var(--text-light);">Monthly insights on building high-performance cultures, delivered to your inbox.</p>
+                            <form class="newsletter-form" action="#" method="post">
+                                <input type="email" name="email" placeholder="Enter your email address" required aria-label="Email for newsletter">
+                                <button type="submit" class="btn btn-secondary">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                    <form class="contact-form" action="#" method="post">
+                        <h3 style="margin-bottom: 1.5rem;">Request a Consultation</h3>
+                        <div class="form-row">
+                            <div class="form-group"><label for="firstName">First Name</label><input type="text" id="firstName" name="firstName" required></div>
+                            <div class="form-group"><label for="lastName">Last Name</label><input type="text" id="lastName" name="lastName" required></div>
+                        </div>
+                        <div class="form-group"><label for="email">Work Email</label><input type="email" id="email" name="email" required></div>
+                        <div class="form-group"><label for="company">Company</label><input type="text" id="company" name="company" required></div>
+                        <div class="form-group">
+                            <label for="role">Your Role</label>
+                            <select id="role" name="role" required>
+                                <option value="">Select your role</option>
+                                <option value="c-level">C-Level Executive</option>
+                                <option value="vp">VP / Director</option>
+                                <option value="hr">HR / People Operations</option>
+                                <option value="manager">People Manager</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="challenge">Tell us about your biggest engagement challenge</label>
+                            <textarea id="challenge" name="challenge" placeholder="What prompted you to reach out? What does success look like for your organization?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo" style="color: white;">
+                        <div class="logo-icon">🚑</div>
+                        <span class="logo-text" style="color: white;">Engagement <strong>911</strong></span>
+                    </a>
+                    <p>Transforming workplace cultures and driving organizational performance through strategic employee engagement consulting.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Engagement Diagnostics</a></li>
+                        <li><a href="#services">Leadership Development</a></li>
+                        <li><a href="#services">Cultural Transformation</a></li>
+                        <li><a href="#services">Retention Strategy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#testimonials">Success Stories</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Engagement Blog</a></li>
+                        <li><a href="#">Research Reports</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Engagement 911. All rights reserved.</p>
+                <p>Helping organizations build cultures where people thrive.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
