@@ -74,17 +74,26 @@
         .logo {
             display: flex;
             align-items: center;
+            gap: 0.6rem;
             text-decoration: none;
         }
-        .logo-img {
-            height: 60px;
+        .logo-icon-img {
+            height: 44px;
             width: auto;
             object-fit: contain;
         }
-        .footer-logo-img {
-            height: 70px;
-            filter: brightness(0) invert(1);
+        .logo-text {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            letter-spacing: -0.01em;
         }
+        .logo-text strong {
+            font-weight: 700;
+        }
+        .footer-logo .logo-text { color: var(--white); }
+        .footer-icon-img { filter: brightness(0) invert(1); }
         nav ul { display: flex; list-style: none; gap: 2.5rem; }
         nav a { font-weight: 500; color: var(--text-dark); font-size: 0.95rem; }
         nav a:hover { color: var(--accent); }
@@ -281,7 +290,8 @@
     <header>
         <div class="header-container">
             <a href="#" class="logo">
-                <img src="logo.png" alt="Engagement 911 - Because Engagement Can't Wait" class="logo-img">
+                <img src="ambulance-icon.png" alt="" class="logo-icon-img">
+                <span class="logo-text">Engagement <strong>911</strong></span>
             </a>
             <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
             <nav>
@@ -490,8 +500,9 @@
         <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="logo">
-                        <img src="logo.png" alt="Engagement 911" class="logo-img footer-logo-img">
+                    <a href="#" class="logo footer-logo">
+                        <img src="ambulance-icon.png" alt="" class="logo-icon-img footer-icon-img">
+                        <span class="logo-text">Engagement <strong>911</strong></span>
                     </a>
                     <p>Transforming workplace cultures and driving organizational performance through strategic employee engagement consulting.</p>
                 </div>
