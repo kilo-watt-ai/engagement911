@@ -18,7 +18,7 @@
     <meta name="twitter:description" content="Strategic employee engagement consulting that drives measurable organizational performance. Because Engagement Can't Wait.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Crimson+Pro:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #6B7FD7;
@@ -45,7 +45,7 @@
             background: var(--white);
         }
         h1, h2, h3, h4 {
-            font-family: 'Crimson Pro', Georgia, serif;
+            font-family: 'Playfair Display', Georgia, serif;
             font-weight: 600;
             color: var(--text-dark);
             line-height: 1.2;
@@ -74,23 +74,16 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--primary);
+            text-decoration: none;
         }
-        .logo-icon {
-            width: 42px;
-            height: 42px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-weight: 700;
-            font-size: 1.25rem;
+        .logo-img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+        .footer-logo-img {
+            height: 70px;
+            filter: brightness(0) invert(1);
         }
         nav ul { display: flex; list-style: none; gap: 2.5rem; }
         nav a { font-weight: 500; color: var(--text-dark); font-size: 0.95rem; }
@@ -150,14 +143,12 @@
         .hero-tagline { font-family: 'Caveat', cursive; font-size: 1.5rem; color: rgba(255, 255, 255, 0.85); margin-bottom: 1rem; letter-spacing: 0.5px; }
         .hero h1 { color: var(--white); margin-bottom: 1.5rem; font-size: clamp(2.75rem, 5vw, 4.25rem); }
         .hero-subtitle { font-size: 1.35rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 2.5rem; line-height: 1.6; }
-        .logo-text { font-family: 'Crimson Pro', serif; }
-        .logo-text strong { color: var(--accent); }
         .skip-link { position: absolute; top: -100%; left: 1rem; background: var(--primary); color: white; padding: 0.75rem 1.5rem; border-radius: 0 0 8px 8px; z-index: 200; font-weight: 600; }
         .skip-link:focus { top: 0; color: white; }
         .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
         .hero-stats { display: flex; gap: 3rem; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.15); }
         .stat { text-align: center; }
-        .stat-number { font-family: 'Crimson Pro', serif; font-size: 2.5rem; font-weight: 700; color: var(--white); display: block; }
+        .stat-number { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; color: var(--white); display: block; }
         .stat-label { font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); text-transform: uppercase; letter-spacing: 0.5px; }
         section { padding: 5rem 2rem; }
         .section-container { max-width: 1200px; margin: 0 auto; }
@@ -196,7 +187,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Crimson Pro', serif;
+            font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary);
@@ -205,7 +196,7 @@
         .testimonials { background: var(--bg-warm); }
         .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
         .testimonial-card { background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 2px 8px var(--shadow); }
-        .testimonial-quote { font-family: 'Crimson Pro', serif; font-size: 1.25rem; color: var(--text-dark); font-style: italic; margin-bottom: 1.5rem; line-height: 1.5; }
+        .testimonial-quote { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--text-dark); font-style: italic; margin-bottom: 1.5rem; line-height: 1.5; }
         .testimonial-author { display: flex; align-items: center; gap: 1rem; }
         .author-avatar { width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: 600; font-size: 1.1rem; }
         .author-info h4 { font-family: 'Source Sans 3', sans-serif; font-size: 1rem; margin-bottom: 0.25rem; }
@@ -290,8 +281,7 @@
     <header>
         <div class="header-container">
             <a href="#" class="logo">
-                <div class="logo-icon">🚑</div>
-                <span class="logo-text">Engagement <strong>911</strong></span>
+                <img src="logo.png" alt="Engagement 911 - Because Engagement Can't Wait" class="logo-img">
             </a>
             <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
             <nav>
@@ -500,9 +490,8 @@
         <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="logo" style="color: white;">
-                        <div class="logo-icon">🚑</div>
-                        <span class="logo-text" style="color: white;">Engagement <strong>911</strong></span>
+                    <a href="#" class="logo">
+                        <img src="logo.png" alt="Engagement 911" class="logo-img footer-logo-img">
                     </a>
                     <p>Transforming workplace cultures and driving organizational performance through strategic employee engagement consulting.</p>
                 </div>
