@@ -448,34 +448,43 @@
                         <div class="newsletter-box">
                             <h4>Stay Informed on Engagement Trends</h4>
                             <p style="margin-bottom: 0; color: var(--text-light);">Monthly insights on building high-performance cultures, delivered to your inbox.</p>
-                            <form class="newsletter-form" action="#" method="post">
-                                <input type="email" name="email" placeholder="Enter your email address" required aria-label="Email for newsletter">
+                            <form class="newsletter-form" action="https://formsubmit.co/hello@engagement911.com" method="POST">
+                                <input type="hidden" name="_subject" value="New Newsletter Subscriber - Engagement 911">
+                                <input type="hidden" name="_next" value="https://engagement911.com/#contact">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="text" name="_honey" style="display:none">
+                                <input type="email" name="Subscriber Email" placeholder="Enter your email address" required aria-label="Email for newsletter">
                                 <button type="submit" class="btn btn-secondary">Subscribe</button>
                             </form>
                         </div>
                     </div>
-                    <form class="contact-form" action="#" method="post">
+                    <form class="contact-form" action="https://formsubmit.co/hello@engagement911.com" method="POST">
                         <h3 style="margin-bottom: 1.5rem;">Request a Consultation</h3>
+                        <input type="hidden" name="_subject" value="New Consultation Request from Engagement 911 Website">
+                        <input type="hidden" name="_next" value="https://engagement911.com/#contact">
+                        <input type="hidden" name="_captcha" value="true">
+                        <input type="text" name="_honey" style="display:none">
+                        <input type="hidden" name="_template" value="table">
                         <div class="form-row">
-                            <div class="form-group"><label for="firstName">First Name</label><input type="text" id="firstName" name="firstName" required></div>
-                            <div class="form-group"><label for="lastName">Last Name</label><input type="text" id="lastName" name="lastName" required></div>
+                            <div class="form-group"><label for="firstName">First Name</label><input type="text" id="firstName" name="First Name" required></div>
+                            <div class="form-group"><label for="lastName">Last Name</label><input type="text" id="lastName" name="Last Name" required></div>
                         </div>
                         <div class="form-group"><label for="email">Work Email</label><input type="email" id="email" name="email" required></div>
-                        <div class="form-group"><label for="company">Company</label><input type="text" id="company" name="company" required></div>
+                        <div class="form-group"><label for="company">Company</label><input type="text" id="company" name="Company" required></div>
                         <div class="form-group">
                             <label for="role">Your Role</label>
-                            <select id="role" name="role" required>
+                            <select id="role" name="Role" required>
                                 <option value="">Select your role</option>
-                                <option value="c-level">C-Level Executive</option>
-                                <option value="vp">VP / Director</option>
-                                <option value="hr">HR / People Operations</option>
-                                <option value="manager">People Manager</option>
-                                <option value="other">Other</option>
+                                <option value="C-Level Executive">C-Level Executive</option>
+                                <option value="VP / Director">VP / Director</option>
+                                <option value="HR / People Operations">HR / People Operations</option>
+                                <option value="People Manager">People Manager</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="challenge">Tell us about your biggest engagement challenge</label>
-                            <textarea id="challenge" name="challenge" placeholder="What prompted you to reach out? What does success look like for your organization?"></textarea>
+                            <textarea id="challenge" name="Engagement Challenge" placeholder="What prompted you to reach out? What does success look like for your organization?"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
