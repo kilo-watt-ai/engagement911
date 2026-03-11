@@ -230,6 +230,10 @@
         .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(107, 127, 215, 0.15); }
         .form-group textarea { resize: vertical; min-height: 120px; }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .form-success { display: none; background: #e6f9ed; border: 1px solid #34c759; color: #1a7a33; padding: 1.25rem 1.5rem; border-radius: 10px; margin-bottom: 1.5rem; font-weight: 500; font-size: 1.05rem; text-align: center; animation: fadeSlideIn 0.4s ease; }
+        .form-success.visible { display: block; }
+        .form-success .close-btn { background: none; border: none; color: #1a7a33; font-size: 1.3rem; cursor: pointer; float: right; line-height: 1; padding: 0 0 0 1rem; }
+        @keyframes fadeSlideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
         .newsletter-box { background: linear-gradient(135deg, var(--bg-warm) 0%, var(--white) 100%); padding: 2rem; border-radius: 12px; margin-top: 2rem; border: 1px solid var(--border); }
         .newsletter-box h4 { margin-bottom: 0.5rem; }
         .newsletter-form { display: flex; gap: 0.75rem; margin-top: 1rem; }
@@ -450,7 +454,7 @@
                             <p style="margin-bottom: 0; color: var(--text-light);">Monthly insights on building high-performance cultures, delivered to your inbox.</p>
                             <form class="newsletter-form" action="https://formsubmit.co/hello@engagement911.com" method="POST">
                                 <input type="hidden" name="_subject" value="New Newsletter Subscriber - Engagement 911">
-                                <input type="hidden" name="_next" value="https://engagement911.com/#contact">
+                                <input type="hidden" name="_next" value="https://engagement911.com/?subscribed=true#contact">
                                 <input type="hidden" name="_captcha" value="false">
                                 <input type="text" name="_honey" style="display:none">
                                 <input type="email" name="Subscriber Email" placeholder="Enter your email address" required aria-label="Email for newsletter">
@@ -459,9 +463,17 @@
                         </div>
                     </div>
                     <form class="contact-form" action="https://formsubmit.co/hello@engagement911.com" method="POST">
+                        <div id="form-success-msg" class="form-success">
+                            <button class="close-btn" onclick="this.parentElement.classList.remove('visible')">&times;</button>
+                            ✓ Thank you! Your message has been sent. We'll be in touch within 24 hours.
+                        </div>
+                        <div id="subscribe-success-msg" class="form-success">
+                            <button class="close-btn" onclick="this.parentElement.classList.remove('visible')">&times;</button>
+                            ✓ You're subscribed! Look out for our next engagement insights newsletter.
+                        </div>
                         <h3 style="margin-bottom: 1.5rem;">Request a Consultation</h3>
                         <input type="hidden" name="_subject" value="New Consultation Request from Engagement 911 Website">
-                        <input type="hidden" name="_next" value="https://engagement911.com/#contact">
+                        <input type="hidden" name="_next" value="https://engagement911.com/?submitted=true#contact">
                         <input type="hidden" name="_captcha" value="true">
                         <input type="text" name="_honey" style="display:none">
                         <input type="hidden" name="_template" value="table">
@@ -540,6 +552,18 @@
         document.querySelector('.mobile-toggle').addEventListener('click', function() {
             document.querySelector('nav ul').classList.toggle('active');
         });
+
+        (function() {
+            var params = new URLSearchParams(window.location.search);
+            if (params.get('submitted') === 'true') {
+                document.getElementById('form-success-msg').classList.add('visible');
+                window.history.replaceState({}, '', window.location.pathname + '#contact');
+            }
+            if (params.get('subscribed') === 'true') {
+                document.getElementById('subscribe-success-msg').classList.add('visible');
+                window.history.replaceState({}, '', window.location.pathname + '#contact');
+            }
+        })();
     </script>
 </body>
 </html>
