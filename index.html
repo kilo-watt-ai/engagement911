@@ -452,29 +452,27 @@
                         <div class="newsletter-box">
                             <h4>Stay Informed on Engagement Trends</h4>
                             <p style="margin-bottom: 0; color: var(--text-light);">Monthly insights on building high-performance cultures, delivered to your inbox.</p>
-                            <form class="newsletter-form" action="https://formsubmit.co/hello@engagement911.com" method="POST">
+                            <form id="newsletter-form" class="newsletter-form" action="https://formsubmit.co/ajax/hello@engagement911.com" method="POST">
                                 <input type="hidden" name="_subject" value="New Newsletter Subscriber - Engagement 911">
-                                <input type="hidden" name="_next" value="https://engagement911.com/?subscribed=true#contact">
                                 <input type="hidden" name="_captcha" value="false">
                                 <input type="text" name="_honey" style="display:none">
                                 <input type="email" name="Subscriber Email" placeholder="Enter your email address" required aria-label="Email for newsletter">
                                 <button type="submit" class="btn btn-secondary">Subscribe</button>
                             </form>
+                            <div id="subscribe-success-msg" class="form-success" style="margin-top: 1rem; margin-bottom: 0;">
+                                <button type="button" class="close-btn" onclick="this.parentElement.classList.remove('visible')">&times;</button>
+                                ✓ You're subscribed! Look out for our next engagement insights newsletter.
+                            </div>
                         </div>
                     </div>
-                    <form class="contact-form" action="https://formsubmit.co/hello@engagement911.com" method="POST">
+                    <form id="contact-form" class="contact-form" action="https://formsubmit.co/ajax/hello@engagement911.com" method="POST">
                         <div id="form-success-msg" class="form-success">
-                            <button class="close-btn" onclick="this.parentElement.classList.remove('visible')">&times;</button>
+                            <button type="button" class="close-btn" onclick="this.parentElement.classList.remove('visible')">&times;</button>
                             ✓ Thank you! Your message has been sent. We'll be in touch within 24 hours.
-                        </div>
-                        <div id="subscribe-success-msg" class="form-success">
-                            <button class="close-btn" onclick="this.parentElement.classList.remove('visible')">&times;</button>
-                            ✓ You're subscribed! Look out for our next engagement insights newsletter.
                         </div>
                         <h3 style="margin-bottom: 1.5rem;">Request a Consultation</h3>
                         <input type="hidden" name="_subject" value="New Consultation Request from Engagement 911 Website">
-                        <input type="hidden" name="_next" value="https://engagement911.com/?submitted=true#contact">
-                        <input type="hidden" name="_captcha" value="true">
+                        <input type="hidden" name="_captcha" value="false">
                         <input type="text" name="_honey" style="display:none">
                         <input type="hidden" name="_template" value="table">
                         <div class="form-row">
@@ -553,17 +551,57 @@
             document.querySelector('nav ul').classList.toggle('active');
         });
 
-        (function() {
-            var params = new URLSearchParams(window.location.search);
-            if (params.get('submitted') === 'true') {
-                document.getElementById('form-success-msg').classList.add('visible');
-                window.history.replaceState({}, '', window.location.pathname + '#contact');
-            }
-            if (params.get('subscribed') === 'true') {
-                document.getElementById('subscribe-success-msg').classList.add('visible');
-                window.history.replaceState({}, '', window.location.pathname + '#contact');
-            }
-        })();
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var form = this;
+            var btn = form.querySelector('button[type="submit"]');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            }).then(function(res) {
+                if (res.ok) {
+                    document.getElementById('form-success-msg').classList.add('visible');
+                    form.reset();
+                    btn.textContent = 'Send Message';
+                    btn.disabled = false;
+                } else {
+                    btn.textContent = 'Something went wrong. Try again.';
+                    btn.disabled = false;
+                }
+            }).catch(function() {
+                btn.textContent = 'Something went wrong. Try again.';
+                btn.disabled = false;
+            });
+        });
+
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var form = this;
+            var btn = form.querySelector('button[type="submit"]');
+            btn.textContent = 'Subscribing...';
+            btn.disabled = true;
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            }).then(function(res) {
+                if (res.ok) {
+                    document.getElementById('subscribe-success-msg').classList.add('visible');
+                    form.reset();
+                    btn.textContent = 'Subscribe';
+                    btn.disabled = false;
+                } else {
+                    btn.textContent = 'Something went wrong. Try again.';
+                    btn.disabled = false;
+                }
+            }).catch(function() {
+                btn.textContent = 'Something went wrong. Try again.';
+                btn.disabled = false;
+            });
+        });
     </script>
 </body>
 </html>
